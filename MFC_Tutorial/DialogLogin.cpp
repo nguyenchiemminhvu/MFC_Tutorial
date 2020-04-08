@@ -60,6 +60,10 @@ BOOL CDialogLogin::OnInitDialog()
 	HICON iconLogin = AfxGetApp()->LoadIcon(IDI_ICON_LOGIN);
 	SetIcon(iconLogin, FALSE);
 
+	HWND hDBName;
+	GetDlgItem(IDC_EDIT_DBNAME, &hDBName);
+	::PostMessage(hDBName, WM_SETFOCUS, 0, 0);
+
 	return TRUE;
 }
 

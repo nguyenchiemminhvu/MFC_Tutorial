@@ -16,4 +16,7 @@ public:
 
 	DECLARE_MESSAGE_MAP()
 	afx_msg void OnUpdateToolsDxdiag(CCmdUI *pCmdUI);
+	afx_msg void OnUpdateHelpAbout(CCmdUI *pCmdUI);
+	afx_msg void OnHelpAbout();
+	afx_msg void OnToolsDxdiag();
 };

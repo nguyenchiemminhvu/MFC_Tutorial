@@ -21,13 +21,14 @@
 #define ID_ACCELERATOR40023             40023
 #define ID_HELP_ABOUT2                  40025
 #define ID_TOOLS_DXDIAG                 40026
+#define ID_HELP_ABOUT40027              40027
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        111
-#define _APS_NEXT_COMMAND_VALUE         40027
+#define _APS_NEXT_COMMAND_VALUE         40028
 #define _APS_NEXT_CONTROL_VALUE         1008
 #define _APS_NEXT_SYMED_VALUE           101
 #endif

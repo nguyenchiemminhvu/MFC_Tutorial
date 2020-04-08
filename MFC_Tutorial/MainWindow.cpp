@@ -30,6 +30,9 @@ void CMainWindow::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CMainWindow, CFrameWnd)
 	ON_UPDATE_COMMAND_UI(ID_TOOLS_DXDIAG, &CMainWindow::OnUpdateToolsDxdiag)
+	ON_UPDATE_COMMAND_UI(ID_HELP_ABOUT, &CMainWindow::OnUpdateHelpAbout)
+	ON_COMMAND(ID_HELP_ABOUT, &CMainWindow::OnHelpAbout)
+	ON_COMMAND(ID_TOOLS_DXDIAG, &CMainWindow::OnToolsDxdiag)
 END_MESSAGE_MAP()
 
 // CMainWindow message handlers
@@ -37,4 +40,19 @@ END_MESSAGE_MAP()
 void CMainWindow::OnUpdateToolsDxdiag(CCmdUI *pCmdUI)
 {
 	pCmdUI->Enable();
+}
+
+void CMainWindow::OnUpdateHelpAbout(CCmdUI *pCmdUI)
+{
+	pCmdUI->Enable();
+}
+
+void CMainWindow::OnHelpAbout()
+{
+	
+}
+
+void CMainWindow::OnToolsDxdiag()
+{
+	
 }

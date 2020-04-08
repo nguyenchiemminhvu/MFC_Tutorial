@@ -3,16 +3,19 @@
 #include "MainWindow.h"
 #include "DialogLogin.h"
 
+#include "oracl.h"
 #include "resource.h"
 
 CMainApp theApp;
 
 CMainApp::CMainApp(void)
 {
+	OStartup();
 }
 
 CMainApp::~CMainApp(void)
 {
+	OShutdown();
 }
 
 BOOL CMainApp::InitInstance()

@@ -82,6 +82,10 @@ END
 
 IDR_MENU_FIRST_WINDOW MENU 
 BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "New Login",                   ID_FILE_NEWLOGIN
+    END
     POPUP "Help"
     BEGIN
         MENUITEM "About",                       ID_HELP_ABOUT
@@ -94,10 +98,12 @@ END
 // Accelerator
 //
 
-IDR_ACCELERATOR_LOGIN ACCELERATORS 
+IDR_ACCELERATOR_1 ACCELERATORS 
 BEGIN
-    "O",            ID_ACCELERATOR_OPEN,    VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_ACCELERATOR_ABOUT,   VIRTKEY, CONTROL, NOINVERT
     "E",            ID_ACCELERATOR_EXIT,    VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_ACCELERATOR_NEWLOGIN, VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_ACCELERATOR40023,    VIRTKEY, CONTROL, NOINVERT
 END
 
 #endif    // English (U.S.) resources

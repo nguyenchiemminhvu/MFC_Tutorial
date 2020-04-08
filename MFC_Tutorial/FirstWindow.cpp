@@ -1,5 +1,5 @@
 #include "FirstWindow.h"
-
+#include "DialogLogin.h"
 #include <winuser.h>
 #include "resource.h"
 
@@ -30,6 +30,9 @@ void CFirstWindow::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CFirstWindow, CFrameWnd)
 	ON_UPDATE_COMMAND_UI(ID_HELP_ABOUT, &CFirstWindow::OnUpdateHelpAbout)
+	ON_UPDATE_COMMAND_UI(ID_FILE_NEWLOGIN, &CFirstWindow::OnUpdateFileNewlogin)
+	ON_COMMAND(ID_FILE_NEWLOGIN, &CFirstWindow::OnFileNewlogin)
+	ON_COMMAND(ID_HELP_ABOUT, &CFirstWindow::OnHelpAbout)
 END_MESSAGE_MAP()
 
 // CFirstWindow message handlers
@@ -37,4 +40,21 @@ END_MESSAGE_MAP()
 void CFirstWindow::OnUpdateHelpAbout(CCmdUI *pCmdUI)
 {
 	pCmdUI->Enable();
+}
+
+
+void CFirstWindow::OnUpdateFileNewlogin(CCmdUI *pCmdUI)
+{
+	pCmdUI->Enable();
+}
+
+void CFirstWindow::OnFileNewlogin()
+{
+	CDialogLogin d;
+	d.DoModal();
+}
+
+void CFirstWindow::OnHelpAbout()
+{
+	AfxMessageBox(L"About");
 }

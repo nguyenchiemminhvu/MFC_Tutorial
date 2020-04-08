@@ -37,8 +37,24 @@ BOOL CMainApp::InitInstance()
 	firstWin->ShowWindow(SW_SHOWNORMAL);
 	firstWin->CenterWindow();
 	firstWin->UpdateWindow();
+	firstWin->LoadAccelTable(MAKEINTRESOURCE(IDR_ACCELERATOR_1));
 
+	m_hAccel = LoadAccelerators(AfxGetInstanceHandle(), MAKEINTRESOURCE(IDR_ACCELERATOR_1));
 	delete dLogin;
 
 	return TRUE;
+}
+
+BOOL CMainApp::ProcessMessageFilter(int code, LPMSG msg)
+{
+	if (code >= 0 && AfxGetApp()->m_pMainWnd && m_hAccel)
+	{
+		if (::TranslateAccelerator(AfxGetApp()->m_pMainWnd->m_hWnd, m_hAccel, msg))
+		{
+			AfxMessageBox(L"TEST");
+			return TRUE;
+		}
+	}
+
+	return CWinApp::ProcessMessageFilter(code, msg);
 }

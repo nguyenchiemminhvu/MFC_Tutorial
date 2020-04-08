@@ -15,6 +15,8 @@ public:
 	CDialogLogin(CWnd* pParent = NULL);   // standard constructor
 	virtual ~CDialogLogin();
 
+	virtual bool TestConnection(CString db, CString u, CString p);
+
 // Dialog Data
 	enum { IDD = IDD_DIALOG_LOGIN };
 

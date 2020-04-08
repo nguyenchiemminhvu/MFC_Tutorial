@@ -41,6 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="./INCLUDE"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -61,7 +62,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="ORACLM32.LIB"
 				LinkIncremental="2"
+				AdditionalLibraryDirectories="./LIB"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="1"
@@ -180,11 +183,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\FirstWindow.cpp"
+				RelativePath=".\MainApp.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\MainApp.cpp"
+				RelativePath=".\MainWindow.cpp"
 				>
 			</File>
 		</Filter>
@@ -198,11 +201,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\FirstWindow.h"
+				RelativePath=".\MainApp.h"
 				>
 			</File>
 			<File
-				RelativePath=".\MainApp.h"
+				RelativePath=".\MainWindow.h"
 				>
 			</File>
 			<File
@@ -235,6 +238,22 @@
 				RelativePath=".\toolbar1.bmp"
 				>
 			</File>
+		</Filter>
+		<Filter
+			Name="OO4O"
+			>
+			<Filter
+				Name="INCLUDE"
+				>
+				<File
+					RelativePath=".\INCLUDE\OBOUND.H"
+					>
+				</File>
+				<File
+					RelativePath=".\INCLUDE\ORACL.H"
+					>
+				</File>
+			</Filter>
 		</Filter>
 	</Files>
 	<Globals>

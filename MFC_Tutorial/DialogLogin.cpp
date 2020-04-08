@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "DialogLogin.h"
+#include "oracl.h"
 
 IMPLEMENT_DYNAMIC(CDialogLogin, CDialog)
 
@@ -14,6 +15,24 @@ CDialogLogin::CDialogLogin(CWnd* pParent /*=NULL*/)
 
 CDialogLogin::~CDialogLogin()
 {
+}
+
+bool CDialogLogin::TestConnection(CString d, CString u, CString p)
+{
+	CT2A _d(d), _u(u), _p(p);
+	const char *cDBName = _d.m_psz;
+	const char *cUsername = _u.m_psz;
+	const char *cPassword = _p.m_psz;
+
+	ODatabase db;
+	db.Open(cDBName, cUsername, cPassword);
+	if (!db.IsOpen())
+	{
+		return false;
+	}
+	
+	db.Close();
+	return true;
 }
 
 void CDialogLogin::DoDataExchange(CDataExchange* pDX)
@@ -51,16 +70,24 @@ void CDialogLogin::OnBnClicked_OK()
 	m_editUsername.GetWindowText(Username);
 	m_editPassword.GetWindowText(Password);
 
-	CString combine;
-	combine.Append(L"Connection:\n");
-	combine.Append(DBName);
-	combine.Append(L"\n");
-	combine.Append(Username);
-	combine.Append(L"\n");
-	combine.Append(Password);
-	AfxMessageBox(combine);
+	if (TestConnection(DBName, Username, Password))
+	{
+		CString res;
+		res.Append(L"Connected!\n");
+		res.Append(Username);
+		res.Append(L"/");
+		res.Append(DBName);
+		AfxMessageBox(res);
 
-	CDialog::OnOK();
+		CDialog::OnOK();
+	}
+	else
+	{
+		m_editDBName.SetWindowText(L"");
+		m_editUsername.SetWindowText(L"");
+		m_editPassword.SetWindowText(L"");
+		AfxMessageBox(L"Failed to connect!");
+	}
 }
 
 void CDialogLogin::OnBnClicked_Cancel()

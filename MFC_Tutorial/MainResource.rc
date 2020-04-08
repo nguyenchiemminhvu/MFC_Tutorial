@@ -78,13 +78,9 @@ IDI_ICON_FIRST_WINDOW   ICON                    "ico00001.ico"
 
 IDR_MENU_FIRST_WINDOW MENU 
 BEGIN
-    POPUP "File"
+    POPUP "Tools"
     BEGIN
-        MENUITEM "New Login",                   ID_FILE_NEWLOGIN
-    END
-    POPUP "Help"
-    BEGIN
-        MENUITEM "About",                       ID_HELP_ABOUT
+        MENUITEM "dxdiag",                      ID_TOOLS_DXDIAG
     END
 END
 

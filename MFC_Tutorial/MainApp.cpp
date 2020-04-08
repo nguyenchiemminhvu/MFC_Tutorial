@@ -1,6 +1,6 @@
 #include "MainApp.h"
 
-#include "FirstWindow.h"
+#include "MainWindow.h"
 #include "DialogLogin.h"
 
 #include "resource.h"
@@ -22,17 +22,13 @@ BOOL CMainApp::InitInstance()
 
 	CDialogLogin *dLogin = new CDialogLogin();
 	int loginRes = dLogin->DoModal();
-	if (loginRes == IDOK)
-	{
-		AfxMessageBox(L"Login successfully");
-	}
-	else
+	if (loginRes != IDOK)
 	{
 		delete dLogin;
 		return FALSE;
 	}
 
-	CFirstWindow *firstWin = new CFirstWindow();
+	CMainWindow *firstWin = new CMainWindow();
 	m_pMainWnd = firstWin;
 	firstWin->ShowWindow(SW_SHOWNORMAL);
 	firstWin->CenterWindow();

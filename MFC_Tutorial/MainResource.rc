@@ -29,6 +29,7 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 IDD_DIALOG_LOGIN DIALOGEX 0, 0, 186, 92
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
 CAPTION "Login"
+MENU IDR_MENU_LOGIN
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,70,71,50,14
@@ -53,6 +54,51 @@ BEGIN
     END
 END
 #endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_LOGIN          ICON                    "icon1.ico"
+IDI_ICON_FIRST_WINDOW   ICON                    "ico00001.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_LOGIN MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Open From File",              ID_FILE_OPENFILE
+        MENUITEM "Exit",                        ID_FILE_EXIT
+    END
+END
+
+IDR_MENU_FIRST_WINDOW MENU 
+BEGIN
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About",                       ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR_LOGIN ACCELERATORS 
+BEGIN
+    "O",            ID_ACCELERATOR_OPEN,    VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_ACCELERATOR_EXIT,    VIRTKEY, CONTROL, NOINVERT
+END
 
 #endif    // English (U.S.) resources
 /////////////////////////////////////////////////////////////////////////////

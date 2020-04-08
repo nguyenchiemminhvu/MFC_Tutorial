@@ -220,11 +220,27 @@
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
 			<File
+				RelativePath=".\ico00001.ico"
+				>
+			</File>
+			<File
+				RelativePath=".\icon1.ico"
+				>
+			</File>
+			<File
 				RelativePath=".\MainResource.rc"
+				>
+			</File>
+			<File
+				RelativePath=".\toolbar1.bmp"
 				>
 			</File>
 		</Filter>
 	</Files>
 	<Globals>
+		<Global
+			Name="RESOURCE_FILE"
+			Value="MainResource.rc"
+		/>
 	</Globals>
 </VisualStudioProject>

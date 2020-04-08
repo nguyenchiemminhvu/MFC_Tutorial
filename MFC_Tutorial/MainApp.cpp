@@ -3,6 +3,8 @@
 #include "FirstWindow.h"
 #include "DialogLogin.h"
 
+#include "resource.h"
+
 CMainApp theApp;
 
 CMainApp::CMainApp(void)

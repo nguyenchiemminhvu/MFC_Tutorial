@@ -22,6 +22,7 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 
 	DECLARE_MESSAGE_MAP()
+	afx_msg virtual BOOL OnInitDialog();
 };
 
 #endif // __DIALOG_LOGIN_H__

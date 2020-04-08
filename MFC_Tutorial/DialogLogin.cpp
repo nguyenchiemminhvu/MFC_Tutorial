@@ -27,3 +27,13 @@ END_MESSAGE_MAP()
 
 
 // CDialogLogin message handlers
+BOOL CDialogLogin::OnInitDialog()
+{
+	if (!CDialog::OnInitDialog())
+		return FALSE;
+
+	HICON iconLogin = AfxGetApp()->LoadIcon(IDI_ICON_LOGIN);
+	SetIcon(iconLogin, FALSE);
+
+	return TRUE;
+}

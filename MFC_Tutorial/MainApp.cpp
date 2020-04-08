@@ -1,6 +1,7 @@
 #include "MainApp.h"
 
 #include "FirstWindow.h"
+#include "DialogLogin.h"
 
 CMainApp theApp;
 
@@ -17,12 +18,25 @@ BOOL CMainApp::InitInstance()
 	if (!CWinApp::InitInstance())
 		return FALSE;
 
-	CFirstWindow *firstWin = new CFirstWindow();
+	CDialogLogin *dLogin = new CDialogLogin();
+	int loginRes = dLogin->DoModal();
+	if (loginRes == IDOK)
+	{
+		AfxMessageBox(L"Login successfully");
+	}
+	else
+	{
+		delete dLogin;
+		return FALSE;
+	}
 
+	CFirstWindow *firstWin = new CFirstWindow();
 	m_pMainWnd = firstWin;
-	
 	firstWin->ShowWindow(SW_SHOWNORMAL);
+	firstWin->CenterWindow();
 	firstWin->UpdateWindow();
+
+	delete dLogin;
 
 	return TRUE;
 }

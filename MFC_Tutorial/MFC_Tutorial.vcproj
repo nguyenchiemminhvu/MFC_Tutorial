@@ -176,6 +176,10 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\DialogLogin.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\FirstWindow.cpp"
 				>
 			</File>
@@ -190,6 +194,10 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\DialogLogin.h"
+				>
+			</File>
+			<File
 				RelativePath=".\FirstWindow.h"
 				>
 			</File>
@@ -199,6 +207,10 @@
 			</File>
 			<File
 				RelativePath=".\resource.h"
+				>
+			</File>
+			<File
+				RelativePath=".\stdafx.h"
 				>
 			</File>
 		</Filter>

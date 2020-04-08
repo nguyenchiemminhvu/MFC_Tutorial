@@ -1,6 +1,6 @@
 #include "MainWindow.h"
 #include "DialogLogin.h"
-#include <winuser.h>
+
 #include "resource.h"
 
 IMPLEMENT_DYNAMIC(CMainWindow, CFrameWnd)

@@ -19,9 +19,6 @@ public:
 
 protected:
 	DECLARE_MESSAGE_MAP()
-
-public:
-	afx_msg virtual BOOL OnInitDialog();
 };
 
 #endif // __DXDIAG_SHEET_H__

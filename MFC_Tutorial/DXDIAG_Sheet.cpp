@@ -28,11 +28,3 @@ END_MESSAGE_MAP()
 
 
 // DXDIAG_Sheet message handlers
-BOOL DXDIAG_Sheet::OnInitDialog()
-{
-	if (!CPropertySheet::OnInitDialog())
-		return FALSE;
-
-
-	return TRUE;
-}

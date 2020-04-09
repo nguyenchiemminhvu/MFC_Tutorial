@@ -6,7 +6,6 @@
 #define IDI_ICON_LOGIN                  102
 #define IDI_ICON_FIRST_WINDOW           103
 #define IDD_DXDIAG_SYSTEM               107
-#define IDD_PROPPAGE_LARGE              108
 #define IDD_DXDIAG_DISPLAY              108
 #define IDR_ACCELERATOR_1               109
 #define IDR_MENU_FIRST_WINDOW           110
@@ -15,6 +14,18 @@
 #define ID_BTN_LOGIN_OK                 1004
 #define ID_BTN_LOGIN_CANCEL             1005
 #define IDC_EDIT_PASSWORD               1007
+#define IDC_INFO_DATE_TIME              1008
+#define IDC_SYSTEM_DATE_TIME            1008
+#define IDC_SYSTEM_COMPUTER_NAME        1009
+#define IDC_SYSTEM_OP                   1010
+#define IDC_SYSTEM_LANGUAGE             1011
+#define IDC_SYSTEM_MANUFACTORING        1012
+#define IDC_SYSTEM_MODEL                1013
+#define IDC_SYSTEM_BIOS                 1014
+#define IDC_SYSTEM_PROCESSOR            1015
+#define IDC_SYSTEM_MEMORY               1016
+#define IDC_SYSTEM_PAGE_FILE            1017
+#define IDC_SYSTEM_DX_VERSION           1018
 #define ID_FILE_EXIT_1                  40007
 #define ID_ACCELERATOR_EXIT             40015
 #define ID_HELP_ABOUT                   40017
@@ -36,7 +47,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        111
 #define _APS_NEXT_COMMAND_VALUE         40033
-#define _APS_NEXT_CONTROL_VALUE         1008
+#define _APS_NEXT_CONTROL_VALUE         1019
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

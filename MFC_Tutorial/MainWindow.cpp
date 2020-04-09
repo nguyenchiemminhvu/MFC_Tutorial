@@ -49,7 +49,7 @@ void CMainWindow::OnUpdateHelpAbout(CCmdUI *pCmdUI)
 
 void CMainWindow::OnHelpAbout()
 {
-	
+	AfxMessageBox(L"Author: Nguyen Chiem Minh Vu\nnguyenchiemminhvu@gmail.com\n093.435.9954");
 }
 
 void CMainWindow::OnToolsDxdiag()

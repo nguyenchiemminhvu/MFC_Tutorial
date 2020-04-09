@@ -4,8 +4,11 @@
 #include "stdafx.h"
 #include "DXDIAG_System.h"
 
-
-// DXDIAG_System dialog
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
+#include <windows.h>
+#include <winperf.h>
 
 IMPLEMENT_DYNAMIC(DXDIAG_System, CPropertyPage)
 
@@ -46,6 +49,26 @@ BOOL DXDIAG_System::OnInitDialog()
 	if (!CDialog::OnInitDialog())
 		return FALSE;
 	
-	
+	WCHAR lpComputerName[255];
+	DWORD lpComputerNameSize;
+	GetComputerName(lpComputerName, &lpComputerNameSize);
+	m_System_ComputerName.SetWindowText(lpComputerName);
+
+	//HKEY_LOCAL_MACHINE/ARDWARE/DESCRIPTION/System/BIOS/BIOSVersion
+	m_System_BIOS.SetWindowText(L"NULL");
+
+	const int bytesToMB = 1024 * 1024;
+	MEMORYSTATUSEX memStatus;
+	memStatus.dwLength = sizeof(memStatus);
+	GlobalMemoryStatusEx(&memStatus);
+
+	WCHAR lpMemory[255];
+	swprintf(lpMemory, L"%d (MB) RAM", memStatus.ullTotalPhys / bytesToMB);
+	m_System_Memory.SetWindowText(lpMemory);
+
+	WCHAR lpPageFile[255];
+	swprintf(lpPageFile, L"%d MB used, %d MB available", memStatus.ullTotalPageFile / bytesToMB, memStatus.ullAvailPageFile / bytesToMB);
+	m_System_PageFile.SetWindowText(lpPageFile);
+
 	return TRUE;
 }

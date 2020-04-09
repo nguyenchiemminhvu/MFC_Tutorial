@@ -187,6 +187,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\DXDIAG_Sheet.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\DXDIAG_System.cpp"
 				>
 			</File>
@@ -210,6 +214,10 @@
 			</File>
 			<File
 				RelativePath=".\DXDIAG_Display.h"
+				>
+			</File>
+			<File
+				RelativePath=".\DXDIAG_Sheet.h"
 				>
 			</File>
 			<File

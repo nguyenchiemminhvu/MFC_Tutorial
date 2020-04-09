@@ -1,5 +1,6 @@
 #include "MainWindow.h"
 #include "DialogLogin.h"
+#include "DXDIAG_Sheet.h"
 
 #include "resource.h"
 
@@ -61,7 +62,19 @@ void CMainWindow::OnHelpAbout()
 
 void CMainWindow::OnToolsDxdiag()
 {
-	
+	//DXDIAG_Sheet dxdiag(L"DXDIAG", this);
+	//dxdiag.AddPage(new DXDIAG_System());
+	//dxdiag.AddPage(new DXDIAG_Display());
+
+	//dxdiag.DoModal();
+
+	DXDIAG_Sheet *dxdiag = new DXDIAG_Sheet(L"DXDIAG", this);
+	dxdiag->AddPage(new DXDIAG_System());
+	dxdiag->AddPage(new DXDIAG_Display());
+
+	dxdiag->Create(this, WS_SYSMENU | WS_OVERLAPPED);
+	dxdiag->ShowWindow(SW_SHOWNORMAL);
+	dxdiag->UpdateWindow();
 }
 
 void CMainWindow::OnToolsSettings()

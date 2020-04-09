@@ -183,6 +183,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\DXDIAG_Display.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\DXDIAG_System.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\MainApp.cpp"
 				>
 			</File>
@@ -198,6 +206,14 @@
 			>
 			<File
 				RelativePath=".\DialogLogin.h"
+				>
+			</File>
+			<File
+				RelativePath=".\DXDIAG_Display.h"
+				>
+			</File>
+			<File
+				RelativePath=".\DXDIAG_System.h"
 				>
 			</File>
 			<File

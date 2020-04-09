@@ -5,6 +5,9 @@
 #define IDD_DIALOG_LOGIN                101
 #define IDI_ICON_LOGIN                  102
 #define IDI_ICON_FIRST_WINDOW           103
+#define IDD_DXDIAG_SYSTEM               107
+#define IDD_PROPPAGE_LARGE              108
+#define IDD_DXDIAG_DISPLAY              108
 #define IDR_ACCELERATOR_1               109
 #define IDR_MENU_FIRST_WINDOW           110
 #define IDC_EDIT_DBNAME                 1001
@@ -22,13 +25,17 @@
 #define ID_HELP_ABOUT2                  40025
 #define ID_TOOLS_DXDIAG                 40026
 #define ID_HELP_ABOUT40027              40027
+#define ID_ACCELERATOR40028             40028
+#define ID_ACCELERATOR40029             40029
+#define ID_ACCELERATOR40030             40030
+#define ID_TOOLS_SETTINGS               40032
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        111
-#define _APS_NEXT_COMMAND_VALUE         40028
+#define _APS_NEXT_COMMAND_VALUE         40033
 #define _APS_NEXT_CONTROL_VALUE         1008
 #define _APS_NEXT_SYMED_VALUE           101
 #endif

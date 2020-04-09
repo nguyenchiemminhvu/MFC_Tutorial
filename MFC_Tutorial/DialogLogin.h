@@ -26,6 +26,7 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 	afx_msg virtual BOOL OnInitDialog();
+	afx_msg void OnBnClicked_CheckLogin();
 	afx_msg void OnBnClicked_OK();
 	afx_msg void OnBnClicked_Cancel();
 
@@ -33,6 +34,9 @@ public:
 	CEdit m_editDBName;
 	CEdit m_editUsername;
 	CEdit m_editPassword;
+
+	CButton m_checkLogin;
+	CButton m_buttonLogin;
 };
 
 #endif // __DIALOG_LOGIN_H__

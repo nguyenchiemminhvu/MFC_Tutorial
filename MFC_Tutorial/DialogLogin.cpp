@@ -42,10 +42,14 @@ void CDialogLogin::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_EDIT_DBNAME, m_editDBName);
 	DDX_Control(pDX, IDC_EDIT_USERNAME, m_editUsername);
 	DDX_Control(pDX, IDC_EDIT_PASSWORD, m_editPassword);
+
+	DDX_Control(pDX, IDC_CHECK_LOGIN, m_checkLogin);
+	DDX_Control(pDX, ID_BTN_LOGIN_OK, m_buttonLogin);
 }
 
 
 BEGIN_MESSAGE_MAP(CDialogLogin, CDialog)
+	ON_BN_CLICKED(IDC_CHECK_LOGIN, &CDialogLogin::OnBnClicked_CheckLogin)
 	ON_BN_CLICKED(ID_BTN_LOGIN_OK, &CDialogLogin::OnBnClicked_OK)
 	ON_BN_CLICKED(ID_BTN_LOGIN_CANCEL, &CDialogLogin::OnBnClicked_Cancel)
 END_MESSAGE_MAP()
@@ -60,11 +64,23 @@ BOOL CDialogLogin::OnInitDialog()
 	HICON iconLogin = AfxGetApp()->LoadIcon(IDI_ICON_LOGIN);
 	SetIcon(iconLogin, FALSE);
 
-	HWND hDBName;
-	GetDlgItem(IDC_EDIT_DBNAME, &hDBName);
-	::PostMessage(hDBName, WM_SETFOCUS, 0, 0);
+	UpdateData(TRUE);
+	m_checkLogin.SetCheck(1);
+	if (m_checkLogin.GetCheck())
+		m_buttonLogin.EnableWindow(TRUE);
+	else
+		m_buttonLogin.EnableWindow(FALSE);
 
 	return TRUE;
+}
+
+void CDialogLogin::OnBnClicked_CheckLogin()
+{
+	UpdateData(TRUE);
+	if (m_checkLogin.GetCheck())
+		m_buttonLogin.EnableWindow(TRUE);
+	else
+		m_buttonLogin.EnableWindow(FALSE);
 }
 
 void CDialogLogin::OnBnClicked_OK()

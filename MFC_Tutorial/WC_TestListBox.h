@@ -26,9 +26,24 @@ protected:
 protected:
 	afx_msg virtual BOOL OnInitDialog();
 
+	afx_msg void OnBnClickedButtonLeftToRight();
+	afx_msg void OnBnClickedButtonRightToLeft();
+
+	afx_msg void OnLbnSelchangeListLeft();
+	afx_msg void OnLbnSelchangeListRight();
+
+	afx_msg void OnBnClickedOk();
+	afx_msg void OnBnClickedCancel();
+
 public:
 	CButton m_BtnLeftToRight;
 	CButton m_BtnRightToLeft;
+
+	CString m_leftSelected;
+	CListBox m_ListBoxLeft;
+
+	CString m_rightSelected;
+	CListBox m_ListBoxRight;
 };
 
 #endif // __WC_TEST_LISTBOX_H__

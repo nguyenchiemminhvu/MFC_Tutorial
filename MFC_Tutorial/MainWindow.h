@@ -31,9 +31,20 @@ protected:
 	afx_msg void OnUpdateWindowscontrolsTesttree(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateWindowscontrolsTestlist(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateHelpAbout(CCmdUI *pCmdUI);
-	afx_msg void OnHelpAbout();
+
 	afx_msg void OnToolsDxdiag();
 	afx_msg void OnToolsSettings();
+	afx_msg void OnWindowscontrolsTestlistbox();
+	afx_msg void OnWindowscontrolsTestcombobox();
+	afx_msg void OnWindowscontrolsTestradiobutton();
+	afx_msg void OnWindowscontrolsTestcheckbox();
+	afx_msg void OnWindowscontrolsTestspinbutton();
+	afx_msg void OnWindowscontrolsTestprogressbar();
+	afx_msg void OnWindowscontrolsTestdatetimepicker();
+	afx_msg void OnWindowscontrolsTestscrollbar();
+	afx_msg void OnWindowscontrolsTesttree();
+	afx_msg void OnWindowscontrolsTestlist();
+	afx_msg void OnHelpAbout();
 };
 
 #endif // __MAIN_WINDOW_H__

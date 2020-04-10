@@ -32,10 +32,6 @@ void CMainWindow::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CMainWindow, CFrameWnd)
 	ON_UPDATE_COMMAND_UI(ID_TOOLS_DXDIAG, &CMainWindow::OnUpdateToolsDxdiag)
 	ON_UPDATE_COMMAND_UI(ID_TOOLS_SETTINGS, &CMainWindow::OnUpdateToolsSettings)
-	ON_UPDATE_COMMAND_UI(ID_HELP_ABOUT, &CMainWindow::OnUpdateHelpAbout)
-	ON_COMMAND(ID_HELP_ABOUT, &CMainWindow::OnHelpAbout)
-	ON_COMMAND(ID_TOOLS_DXDIAG, &CMainWindow::OnToolsDxdiag)
-	ON_COMMAND(ID_TOOLS_SETTINGS, &CMainWindow::OnToolsSettings)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTLISTBOX, &CMainWindow::OnUpdateWindowscontrolsTestlistbox)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTCOMBOBOX, &CMainWindow::OnUpdateWindowscontrolsTestcombobox)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTRADIOBUTTON, &CMainWindow::OnUpdateWindowscontrolsTestradiobutton)
@@ -46,6 +42,21 @@ BEGIN_MESSAGE_MAP(CMainWindow, CFrameWnd)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTSCROLLBAR, &CMainWindow::OnUpdateWindowscontrolsTestscrollbar)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTTREE, &CMainWindow::OnUpdateWindowscontrolsTesttree)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTLIST, &CMainWindow::OnUpdateWindowscontrolsTestlist)
+	ON_UPDATE_COMMAND_UI(ID_HELP_ABOUT, &CMainWindow::OnUpdateHelpAbout)
+	
+	ON_COMMAND(ID_TOOLS_DXDIAG, &CMainWindow::OnToolsDxdiag)
+	ON_COMMAND(ID_TOOLS_SETTINGS, &CMainWindow::OnToolsSettings)
+	ON_COMMAND(ID_WINDOWSCONTROLS_TESTLISTBOX, &CMainWindow::OnWindowscontrolsTestlistbox)
+	ON_COMMAND(ID_WINDOWSCONTROLS_TESTCOMBOBOX, &CMainWindow::OnWindowscontrolsTestcombobox)
+	ON_COMMAND(ID_WINDOWSCONTROLS_TESTRADIOBUTTON, &CMainWindow::OnWindowscontrolsTestradiobutton)
+	ON_COMMAND(ID_WINDOWSCONTROLS_TESTCHECKBOX, &CMainWindow::OnWindowscontrolsTestcheckbox)
+	ON_COMMAND(ID_WINDOWSCONTROLS_TESTSPINBUTTON, &CMainWindow::OnWindowscontrolsTestspinbutton)
+	ON_COMMAND(ID_WINDOWSCONTROLS_TESTPROGRESSBAR, &CMainWindow::OnWindowscontrolsTestprogressbar)
+	ON_COMMAND(ID_WINDOWSCONTROLS_TESTDATETIMEPICKER, &CMainWindow::OnWindowscontrolsTestdatetimepicker)
+	ON_COMMAND(ID_WINDOWSCONTROLS_TESTSCROLLBAR, &CMainWindow::OnWindowscontrolsTestscrollbar)
+	ON_COMMAND(ID_WINDOWSCONTROLS_TESTTREE, &CMainWindow::OnWindowscontrolsTesttree)
+	ON_COMMAND(ID_WINDOWSCONTROLS_TESTLIST, &CMainWindow::OnWindowscontrolsTestlist)
+	ON_COMMAND(ID_HELP_ABOUT, &CMainWindow::OnHelpAbout)
 END_MESSAGE_MAP()
 
 // CMainWindow message handlers
@@ -115,11 +126,6 @@ void CMainWindow::OnUpdateHelpAbout(CCmdUI *pCmdUI)
 	pCmdUI->Enable();
 }
 
-void CMainWindow::OnHelpAbout()
-{
-	AfxMessageBox(L"Author: Nguyen Chiem Minh Vu\nnguyenchiemminhvu@gmail.com\n093.435.9954");
-}
-
 void CMainWindow::OnToolsDxdiag()
 {
 	//DXDIAG_Sheet dxdiag(L"DXDIAG", this);
@@ -140,4 +146,59 @@ void CMainWindow::OnToolsDxdiag()
 void CMainWindow::OnToolsSettings()
 {
 	
+}
+
+void CMainWindow::OnWindowscontrolsTestlistbox()
+{
+	
+}
+
+void CMainWindow::OnWindowscontrolsTestcombobox()
+{
+	
+}
+
+void CMainWindow::OnWindowscontrolsTestradiobutton()
+{
+	
+}
+
+void CMainWindow::OnWindowscontrolsTestcheckbox()
+{
+	
+}
+
+void CMainWindow::OnWindowscontrolsTestspinbutton()
+{
+	
+}
+
+void CMainWindow::OnWindowscontrolsTestprogressbar()
+{
+	
+}
+
+void CMainWindow::OnWindowscontrolsTestdatetimepicker()
+{
+	
+}
+
+void CMainWindow::OnWindowscontrolsTestscrollbar()
+{
+	
+}
+
+void CMainWindow::OnWindowscontrolsTesttree()
+{
+	
+}
+
+void CMainWindow::OnWindowscontrolsTestlist()
+{
+	
+}
+
+void CMainWindow::OnHelpAbout()
+{
+	AfxMessageBox(L"Author: Nguyen Chiem Minh Vu\nnguyenchiemminhvu@gmail.com\n093.435.9954");
 }

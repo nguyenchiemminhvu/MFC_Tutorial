@@ -9,6 +9,17 @@
 #define IDD_DXDIAG_DISPLAY              108
 #define IDR_ACCELERATOR_1               109
 #define IDR_MENU_FIRST_WINDOW           110
+#define IDD_WC_LISTBOX                  111
+#define IDD_WC_COMBOBOX                 112
+#define IDD_WC_RADIOBUTTON              113
+#define IDD_WC_CHECKBOX                 114
+#define IDD_WC_SPINBUTTON               115
+#define IDD_WC_PROGRESSBAR              116
+#define IDD_WC_DATETIMEPICKER           117
+#define IDD_WC_SCROLLBAR                118
+#define IDD_WC_TREE                     119
+#define IDD_DIALOG1                     120
+#define IDD_WC_TABLE                    120
 #define IDC_EDIT_DBNAME                 1001
 #define IDC_EDIT_USERNAME               1003
 #define ID_BTN_LOGIN_OK                 1004
@@ -60,7 +71,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        111
+#define _APS_NEXT_RESOURCE_VALUE        121
 #define _APS_NEXT_COMMAND_VALUE         40049
 #define _APS_NEXT_CONTROL_VALUE         1020
 #define _APS_NEXT_SYMED_VALUE           101

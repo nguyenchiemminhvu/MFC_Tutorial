@@ -2,6 +2,8 @@
 #include "DialogLogin.h"
 #include "DXDIAG_Sheet.h"
 
+#include "WC_TestListBox.h"
+
 #include "resource.h"
 
 IMPLEMENT_DYNAMIC(CMainWindow, CFrameWnd)
@@ -150,7 +152,8 @@ void CMainWindow::OnToolsSettings()
 
 void CMainWindow::OnWindowscontrolsTestlistbox()
 {
-	
+	WC_TestListBox testListBox;
+	testListBox.DoModal();
 }
 
 void CMainWindow::OnWindowscontrolsTestcombobox()

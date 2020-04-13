@@ -18,7 +18,6 @@
 #define IDD_WC_TABLE                    120
 #define IDB_BITMAP_LEFT_TO_RIGHT        121
 #define IDB_BITMAP_RIGHT_TO_LEFT        122
-#define IDD_WC_WINDOWSCONTROLS_TESTSLIDER 124
 #define IDD_WC_TESTSLIDER               124
 #define IDC_EDIT_DBNAME                 1001
 #define IDC_EDIT_USERNAME               1003
@@ -55,6 +54,8 @@
 #define IDC_STATIC_OPTION               1034
 #define IDC_EDIT_BONUS                  1036
 #define IDC_SPIN_BONUS                  1037
+#define IDC_DATETIMEPICKER1             1040
+#define IDC_DATETIMEPICKER_1            1040
 #define ID_FILE_EXIT_1                  40007
 #define ID_ACCELERATOR_EXIT             40015
 #define ID_HELP_ABOUT                   40017
@@ -91,7 +92,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        125
 #define _APS_NEXT_COMMAND_VALUE         40049
-#define _APS_NEXT_CONTROL_VALUE         1040
+#define _APS_NEXT_CONTROL_VALUE         1041
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

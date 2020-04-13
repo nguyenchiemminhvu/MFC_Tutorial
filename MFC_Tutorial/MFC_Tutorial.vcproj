@@ -209,6 +209,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\WC_TestDateTimePicker.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\WC_TestListBox.cpp"
 				>
 			</File>
@@ -260,6 +264,10 @@
 			</File>
 			<File
 				RelativePath=".\WC_TestComboBox.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WC_TestDateTimePicker.h"
 				>
 			</File>
 			<File

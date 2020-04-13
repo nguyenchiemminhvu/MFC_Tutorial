@@ -6,6 +6,7 @@
 #include "WC_TestComboBox.h"
 #include "WC_TestRadioButtons.h"
 #include "WC_TestSpinButton.h"
+#include "WC_TestDateTimePicker.h"
 
 #include "resource.h"
 
@@ -165,7 +166,8 @@ void CMainWindow::OnWindowscontrolsTestspinbutton()
 
 void CMainWindow::OnWindowscontrolsTestdatetimepicker()
 {
-	
+	WC_TestDateTimePicker testDTP;
+	testDTP.DoModal();
 }
 
 void CMainWindow::OnWindowscontrolsTestslider()

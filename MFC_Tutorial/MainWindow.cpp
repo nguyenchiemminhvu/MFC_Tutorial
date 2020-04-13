@@ -5,6 +5,7 @@
 #include "WC_TestListBox.h"
 #include "WC_TestComboBox.h"
 #include "WC_TestRadioButtons.h"
+#include "WC_TestSpinButton.h"
 
 #include "resource.h"
 
@@ -165,7 +166,8 @@ void CMainWindow::OnWindowscontrolsTestradiobutton()
 
 void CMainWindow::OnWindowscontrolsTestspinbutton()
 {
-	
+	WC_TestSpinButton testSB;
+	testSB.DoModal();
 }
 
 void CMainWindow::OnWindowscontrolsTestprogressbar()

@@ -216,6 +216,10 @@
 				RelativePath=".\WC_TestRadioButtons.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\WC_TestSpinButton.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -264,6 +268,10 @@
 			</File>
 			<File
 				RelativePath=".\WC_TestRadioButtons.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WC_TestSpinButton.h"
 				>
 			</File>
 		</Filter>

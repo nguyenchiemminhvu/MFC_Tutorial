@@ -53,6 +53,9 @@
 #define IDC_RADIO6                      1033
 #define IDC_RADIO_2_OPTION_3            1033
 #define IDC_STATIC_OPTION               1034
+#define IDC_EDIT_BONUS                  1036
+#define IDC_SPIN_BONUS                  1037
+#define IDC_COMBO1                      1038
 #define ID_FILE_EXIT_1                  40007
 #define ID_ACCELERATOR_EXIT             40015
 #define ID_HELP_ABOUT                   40017
@@ -89,7 +92,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        124
 #define _APS_NEXT_COMMAND_VALUE         40049
-#define _APS_NEXT_CONTROL_VALUE         1035
+#define _APS_NEXT_CONTROL_VALUE         1039
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

@@ -41,9 +41,7 @@ BEGIN_MESSAGE_MAP(CMainWindow, CFrameWnd)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTCOMBOBOX, &CMainWindow::OnUpdateWindowscontrolsTestcombobox)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTRADIOBUTTON, &CMainWindow::OnUpdateWindowscontrolsTestradiobutton)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTSPINBUTTON, &CMainWindow::OnUpdateWindowscontrolsTestspinbutton)
-	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTPROGRESSBAR, &CMainWindow::OnUpdateWindowscontrolsTestprogressbar)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTDATETIMEPICKER, &CMainWindow::OnUpdateWindowscontrolsTestdatetimepicker)
-	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTSCROLLBAR, &CMainWindow::OnUpdateWindowscontrolsTestscrollbar)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTTREE, &CMainWindow::OnUpdateWindowscontrolsTesttree)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTLIST, &CMainWindow::OnUpdateWindowscontrolsTestlist)
 	ON_UPDATE_COMMAND_UI(ID_HELP_ABOUT, &CMainWindow::OnUpdateHelpAbout)
@@ -54,12 +52,12 @@ BEGIN_MESSAGE_MAP(CMainWindow, CFrameWnd)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTCOMBOBOX, &CMainWindow::OnWindowscontrolsTestcombobox)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTRADIOBUTTON, &CMainWindow::OnWindowscontrolsTestradiobutton)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTSPINBUTTON, &CMainWindow::OnWindowscontrolsTestspinbutton)
-	ON_COMMAND(ID_WINDOWSCONTROLS_TESTPROGRESSBAR, &CMainWindow::OnWindowscontrolsTestprogressbar)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTDATETIMEPICKER, &CMainWindow::OnWindowscontrolsTestdatetimepicker)
-	ON_COMMAND(ID_WINDOWSCONTROLS_TESTSCROLLBAR, &CMainWindow::OnWindowscontrolsTestscrollbar)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTTREE, &CMainWindow::OnWindowscontrolsTesttree)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTLIST, &CMainWindow::OnWindowscontrolsTestlist)
 	ON_COMMAND(ID_HELP_ABOUT, &CMainWindow::OnHelpAbout)
+	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTSLIDER, &CMainWindow::OnUpdateWindowscontrolsTestslider)
+	ON_COMMAND(ID_WINDOWSCONTROLS_TESTSLIDER, &CMainWindow::OnWindowscontrolsTestslider)
 END_MESSAGE_MAP()
 
 // CMainWindow message handlers
@@ -94,17 +92,12 @@ void CMainWindow::OnUpdateWindowscontrolsTestspinbutton(CCmdUI *pCmdUI)
 	pCmdUI->Enable();
 }
 
-void CMainWindow::OnUpdateWindowscontrolsTestprogressbar(CCmdUI *pCmdUI)
-{
-	pCmdUI->Enable();
-}
-
 void CMainWindow::OnUpdateWindowscontrolsTestdatetimepicker(CCmdUI *pCmdUI)
 {
 	pCmdUI->Enable();
 }
 
-void CMainWindow::OnUpdateWindowscontrolsTestscrollbar(CCmdUI *pCmdUI)
+void CMainWindow::OnUpdateWindowscontrolsTestslider(CCmdUI *pCmdUI)
 {
 	pCmdUI->Enable();
 }
@@ -170,17 +163,12 @@ void CMainWindow::OnWindowscontrolsTestspinbutton()
 	testSB.DoModal();
 }
 
-void CMainWindow::OnWindowscontrolsTestprogressbar()
-{
-	
-}
-
 void CMainWindow::OnWindowscontrolsTestdatetimepicker()
 {
 	
 }
 
-void CMainWindow::OnWindowscontrolsTestscrollbar()
+void CMainWindow::OnWindowscontrolsTestslider()
 {
 	
 }

@@ -221,7 +221,19 @@
 				>
 			</File>
 			<File
+				RelativePath=".\WC_TestSlider.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\WC_TestSpinButton.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\WC_TestTable.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\WC_TestTree.cpp"
 				>
 			</File>
 		</Filter>
@@ -279,7 +291,19 @@
 				>
 			</File>
 			<File
+				RelativePath=".\WC_TestSlider.h"
+				>
+			</File>
+			<File
 				RelativePath=".\WC_TestSpinButton.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WC_TestTable.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WC_TestTree.h"
 				>
 			</File>
 		</Filter>

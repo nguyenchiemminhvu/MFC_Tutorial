@@ -7,6 +7,9 @@
 #include "WC_TestRadioButtons.h"
 #include "WC_TestSpinButton.h"
 #include "WC_TestDateTimePicker.h"
+#include "WC_TestSlider.h"
+#include "WC_TestTree.h"
+#include "WC_TestTable.h"
 
 #include "resource.h"
 
@@ -172,17 +175,20 @@ void CMainWindow::OnWindowscontrolsTestdatetimepicker()
 
 void CMainWindow::OnWindowscontrolsTestslider()
 {
-	
+	WC_TestSlider testS;
+	testS.DoModal();
 }
 
 void CMainWindow::OnWindowscontrolsTesttree()
 {
-	
+	WC_TestTree testT;
+	testT.DoModal();
 }
 
 void CMainWindow::OnWindowscontrolsTestlist()
 {
-	
+	WC_TestTable testT;
+	testT.DoModal();
 }
 
 void CMainWindow::OnHelpAbout()

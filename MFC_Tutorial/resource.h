@@ -42,9 +42,18 @@
 #define IDC_LIST_RIGHT                  1021
 #define IDC_BUTTON_LEFT_TO_RIGHT        1022
 #define IDC_BUTTON_RIGHT_TO_LEFT        1023
-#define IDC_COMBO_IMAGES                1023
 #define IDC_COMBO_DEPT                  1023
 #define IDC_LIST_EMP                    1025
+#define IDC_STATIC_GROUP_1              1026
+#define IDC_STATIC_GROUP_2              1027
+#define IDC_RADIO_1_OPTION_1            1028
+#define IDC_RADIO_1_OPTION_2            1029
+#define IDC_RADIO_1_OPTION_3            1030
+#define IDC_RADIO_2_OPTION_1            1031
+#define IDC_RADIO_2_OPTION_2            1032
+#define IDC_RADIO6                      1033
+#define IDC_RADIO_2_OPTION_3            1033
+#define IDC_STATIC_OPTION               1034
 #define ID_FILE_EXIT_1                  40007
 #define ID_ACCELERATOR_EXIT             40015
 #define ID_HELP_ABOUT                   40017
@@ -81,7 +90,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        124
 #define _APS_NEXT_COMMAND_VALUE         40049
-#define _APS_NEXT_CONTROL_VALUE         1026
+#define _APS_NEXT_CONTROL_VALUE         1035
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

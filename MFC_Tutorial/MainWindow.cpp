@@ -4,6 +4,7 @@
 
 #include "WC_TestListBox.h"
 #include "WC_TestComboBox.h"
+#include "WC_TestRadioButtons.h"
 
 #include "resource.h"
 
@@ -165,7 +166,8 @@ void CMainWindow::OnWindowscontrolsTestcombobox()
 
 void CMainWindow::OnWindowscontrolsTestradiobutton()
 {
-	
+	WC_TestRadioButtons testRB;
+	testRB.DoModal();
 }
 
 void CMainWindow::OnWindowscontrolsTestcheckbox()

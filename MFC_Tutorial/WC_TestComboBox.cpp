@@ -25,7 +25,6 @@ void WC_TestComboBox::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_LIST_EMP, m_listEMP);
-	DDX_Control(pDX, IDC_COMBO_IMAGES, m_comboDept);
 }
 
 

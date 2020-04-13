@@ -212,6 +212,10 @@
 				RelativePath=".\WC_TestListBox.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\WC_TestRadioButtons.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -256,6 +260,10 @@
 			</File>
 			<File
 				RelativePath=".\WC_TestListBox.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WC_TestRadioButtons.h"
 				>
 			</File>
 		</Filter>

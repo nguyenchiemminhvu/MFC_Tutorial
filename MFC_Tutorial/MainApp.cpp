@@ -6,6 +6,9 @@
 #include "oracl.h"
 #include "resource.h"
 
+#include <string>
+#include <fstream>
+
 CMainApp theApp;
 
 CMainApp::CMainApp(void)
@@ -40,6 +43,17 @@ BOOL CMainApp::InitInstance()
 
 	m_hAccel = LoadAccelerators(AfxGetInstanceHandle(), MAKEINTRESOURCE(IDR_ACCELERATOR_1));
 	delete dLogin;
+
+	// create needed folders
+	DWORD att = GetFileAttributes(L".\\DOWNLOADS");
+	if (!(att != INVALID_FILE_ATTRIBUTES && (att & FILE_ATTRIBUTE_DIRECTORY))) // check dir not exists
+	{
+		if (!CreateDirectory(L".\\DOWNLOADS", NULL))
+		{
+			AfxMessageBox(L"Can not create folders");
+			return FALSE;
+		}
+	}
 
 	return TRUE;
 }

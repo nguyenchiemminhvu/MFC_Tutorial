@@ -205,6 +205,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\WC_TestComboBox.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\WC_TestListBox.cpp"
 				>
 			</File>
@@ -244,6 +248,10 @@
 			</File>
 			<File
 				RelativePath=".\stdafx.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WC_TestComboBox.h"
 				>
 			</File>
 			<File

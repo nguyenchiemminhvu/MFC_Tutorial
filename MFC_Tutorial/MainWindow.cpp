@@ -3,6 +3,7 @@
 #include "DXDIAG_Sheet.h"
 
 #include "WC_TestListBox.h"
+#include "WC_TestComboBox.h"
 
 #include "resource.h"
 
@@ -158,7 +159,8 @@ void CMainWindow::OnWindowscontrolsTestlistbox()
 
 void CMainWindow::OnWindowscontrolsTestcombobox()
 {
-	
+	WC_TestComboBox testComboBox;
+	testComboBox.DoModal();
 }
 
 void CMainWindow::OnWindowscontrolsTestradiobutton()

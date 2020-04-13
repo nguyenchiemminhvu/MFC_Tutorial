@@ -5,6 +5,12 @@
 #include "DialogLogin.h"
 #include "oracl.h"
 
+#include <stdio.h>
+
+char *DB_NAME = new char[30];
+char *USER_NAME = new char[30];
+char *PASS_WORD = new char[30];
+
 IMPLEMENT_DYNAMIC(CDialogLogin, CDialog)
 
 CDialogLogin::CDialogLogin(CWnd* pParent /*=NULL*/)
@@ -23,6 +29,10 @@ bool CDialogLogin::TestConnection(CString d, CString u, CString p)
 	const char *cDBName = _d.m_psz;
 	const char *cUsername = _u.m_psz;
 	const char *cPassword = _p.m_psz;
+
+	sprintf(DB_NAME, "%s", cDBName);
+	sprintf(USER_NAME, "%s", cUsername);
+	sprintf(PASS_WORD, "%s", cPassword);
 
 	ODatabase db;
 	db.Open(cDBName, cUsername, cPassword);

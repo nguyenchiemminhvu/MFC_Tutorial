@@ -12,7 +12,6 @@
 #define IDD_WC_LISTBOX                  111
 #define IDD_WC_COMBOBOX                 112
 #define IDD_WC_RADIOBUTTON              113
-#define IDD_WC_CHECKBOX                 114
 #define IDD_WC_SPINBUTTON               115
 #define IDD_WC_PROGRESSBAR              116
 #define IDD_WC_DATETIMEPICKER           117

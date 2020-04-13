@@ -23,7 +23,6 @@ protected:
 	afx_msg void OnUpdateWindowscontrolsTestlistbox(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateWindowscontrolsTestcombobox(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateWindowscontrolsTestradiobutton(CCmdUI *pCmdUI);
-	afx_msg void OnUpdateWindowscontrolsTestcheckbox(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateWindowscontrolsTestspinbutton(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateWindowscontrolsTestprogressbar(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateWindowscontrolsTestdatetimepicker(CCmdUI *pCmdUI);
@@ -37,7 +36,6 @@ protected:
 	afx_msg void OnWindowscontrolsTestlistbox();
 	afx_msg void OnWindowscontrolsTestcombobox();
 	afx_msg void OnWindowscontrolsTestradiobutton();
-	afx_msg void OnWindowscontrolsTestcheckbox();
 	afx_msg void OnWindowscontrolsTestspinbutton();
 	afx_msg void OnWindowscontrolsTestprogressbar();
 	afx_msg void OnWindowscontrolsTestdatetimepicker();

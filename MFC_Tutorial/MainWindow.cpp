@@ -39,7 +39,6 @@ BEGIN_MESSAGE_MAP(CMainWindow, CFrameWnd)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTLISTBOX, &CMainWindow::OnUpdateWindowscontrolsTestlistbox)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTCOMBOBOX, &CMainWindow::OnUpdateWindowscontrolsTestcombobox)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTRADIOBUTTON, &CMainWindow::OnUpdateWindowscontrolsTestradiobutton)
-	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTCHECKBOX, &CMainWindow::OnUpdateWindowscontrolsTestcheckbox)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTSPINBUTTON, &CMainWindow::OnUpdateWindowscontrolsTestspinbutton)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTPROGRESSBAR, &CMainWindow::OnUpdateWindowscontrolsTestprogressbar)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTDATETIMEPICKER, &CMainWindow::OnUpdateWindowscontrolsTestdatetimepicker)
@@ -53,7 +52,6 @@ BEGIN_MESSAGE_MAP(CMainWindow, CFrameWnd)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTLISTBOX, &CMainWindow::OnWindowscontrolsTestlistbox)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTCOMBOBOX, &CMainWindow::OnWindowscontrolsTestcombobox)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTRADIOBUTTON, &CMainWindow::OnWindowscontrolsTestradiobutton)
-	ON_COMMAND(ID_WINDOWSCONTROLS_TESTCHECKBOX, &CMainWindow::OnWindowscontrolsTestcheckbox)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTSPINBUTTON, &CMainWindow::OnWindowscontrolsTestspinbutton)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTPROGRESSBAR, &CMainWindow::OnWindowscontrolsTestprogressbar)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTDATETIMEPICKER, &CMainWindow::OnWindowscontrolsTestdatetimepicker)
@@ -86,11 +84,6 @@ void CMainWindow::OnUpdateWindowscontrolsTestcombobox(CCmdUI *pCmdUI)
 }
 
 void CMainWindow::OnUpdateWindowscontrolsTestradiobutton(CCmdUI *pCmdUI)
-{
-	pCmdUI->Enable();
-}
-
-void CMainWindow::OnUpdateWindowscontrolsTestcheckbox(CCmdUI *pCmdUI)
 {
 	pCmdUI->Enable();
 }
@@ -168,11 +161,6 @@ void CMainWindow::OnWindowscontrolsTestradiobutton()
 {
 	WC_TestRadioButtons testRB;
 	testRB.DoModal();
-}
-
-void CMainWindow::OnWindowscontrolsTestcheckbox()
-{
-	
 }
 
 void CMainWindow::OnWindowscontrolsTestspinbutton()

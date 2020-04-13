@@ -25,11 +25,11 @@ protected:
 
 protected:
 	afx_msg virtual BOOL OnInitDialog();
-	afx_msg void OnCbnSelchangeComboImages();
+	afx_msg void OnCbnSelchangeComboDept();
 
 private:
-	CString m_selectedFileName;
-	CComboBox m_comboBoxImages;
+	CComboBox m_comboDept;
+	CListBox m_listEMP;
 };
 
 #endif // __WC_TEST_COMBOBOX_H__

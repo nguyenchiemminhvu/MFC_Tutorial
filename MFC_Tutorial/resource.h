@@ -43,7 +43,8 @@
 #define IDC_BUTTON_LEFT_TO_RIGHT        1022
 #define IDC_BUTTON_RIGHT_TO_LEFT        1023
 #define IDC_COMBO_IMAGES                1023
-#define IDC_STATIC_IMAGE                1024
+#define IDC_COMBO_DEPT                  1023
+#define IDC_LIST_EMP                    1025
 #define ID_FILE_EXIT_1                  40007
 #define ID_ACCELERATOR_EXIT             40015
 #define ID_HELP_ABOUT                   40017
@@ -80,7 +81,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        124
 #define _APS_NEXT_COMMAND_VALUE         40049
-#define _APS_NEXT_CONTROL_VALUE         1025
+#define _APS_NEXT_CONTROL_VALUE         1026
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

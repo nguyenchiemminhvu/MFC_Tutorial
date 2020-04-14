@@ -18,6 +18,8 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 
 	DECLARE_MESSAGE_MAP()
+	afx_msg virtual int OnCreate(LPCREATESTRUCT lpCreateStruct);
+
 	afx_msg void OnUpdateToolsDxdiag(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateToolsSettings(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateWindowscontrolsTestlistbox(CCmdUI *pCmdUI);
@@ -28,6 +30,7 @@ protected:
 	afx_msg void OnUpdateWindowscontrolsTestslider(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateWindowscontrolsTesttree(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateWindowscontrolsTestlist(CCmdUI *pCmdUI);
+	afx_msg void OnUpdateWindowscontrolsTestlistClr(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateHelpAbout(CCmdUI *pCmdUI);
 
 	afx_msg void OnToolsDxdiag();
@@ -40,6 +43,8 @@ protected:
 	afx_msg void OnWindowscontrolsTestslider();
 	afx_msg void OnWindowscontrolsTesttree();
 	afx_msg void OnWindowscontrolsTestlist();
+	afx_msg void OnWindowscontrolsTestlistClr();
+
 	afx_msg void OnHelpAbout();
 };
 

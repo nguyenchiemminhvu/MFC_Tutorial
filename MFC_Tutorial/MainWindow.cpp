@@ -11,6 +11,10 @@
 #include "WC_TestTree.h"
 #include "WC_TestTable.h"
 
+#pragma managed
+#include "WC_TestTableCLR.h"
+#pragma unmanaged
+
 #include "resource.h"
 
 IMPLEMENT_DYNAMIC(CMainWindow, CFrameWnd)
@@ -39,6 +43,8 @@ void CMainWindow::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(CMainWindow, CFrameWnd)
+	ON_WM_CREATE()
+
 	ON_UPDATE_COMMAND_UI(ID_TOOLS_DXDIAG, &CMainWindow::OnUpdateToolsDxdiag)
 	ON_UPDATE_COMMAND_UI(ID_TOOLS_SETTINGS, &CMainWindow::OnUpdateToolsSettings)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTLISTBOX, &CMainWindow::OnUpdateWindowscontrolsTestlistbox)
@@ -47,7 +53,9 @@ BEGIN_MESSAGE_MAP(CMainWindow, CFrameWnd)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTSPINBUTTON, &CMainWindow::OnUpdateWindowscontrolsTestspinbutton)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTDATETIMEPICKER, &CMainWindow::OnUpdateWindowscontrolsTestdatetimepicker)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTTREE, &CMainWindow::OnUpdateWindowscontrolsTesttree)
+	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTSLIDER, &CMainWindow::OnUpdateWindowscontrolsTestslider)
 	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTLIST, &CMainWindow::OnUpdateWindowscontrolsTestlist)
+	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTLIST_CLR, &CMainWindow::OnUpdateWindowscontrolsTestlistClr)
 	ON_UPDATE_COMMAND_UI(ID_HELP_ABOUT, &CMainWindow::OnUpdateHelpAbout)
 	
 	ON_COMMAND(ID_TOOLS_DXDIAG, &CMainWindow::OnToolsDxdiag)
@@ -58,13 +66,23 @@ BEGIN_MESSAGE_MAP(CMainWindow, CFrameWnd)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTSPINBUTTON, &CMainWindow::OnWindowscontrolsTestspinbutton)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTDATETIMEPICKER, &CMainWindow::OnWindowscontrolsTestdatetimepicker)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTTREE, &CMainWindow::OnWindowscontrolsTesttree)
-	ON_COMMAND(ID_WINDOWSCONTROLS_TESTLIST, &CMainWindow::OnWindowscontrolsTestlist)
-	ON_COMMAND(ID_HELP_ABOUT, &CMainWindow::OnHelpAbout)
-	ON_UPDATE_COMMAND_UI(ID_WINDOWSCONTROLS_TESTSLIDER, &CMainWindow::OnUpdateWindowscontrolsTestslider)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTSLIDER, &CMainWindow::OnWindowscontrolsTestslider)
+	ON_COMMAND(ID_WINDOWSCONTROLS_TESTLIST, &CMainWindow::OnWindowscontrolsTestlist)
+	ON_COMMAND(ID_WINDOWSCONTROLS_TESTLIST_CLR, &CMainWindow::OnWindowscontrolsTestlistClr)
+
+	ON_COMMAND(ID_HELP_ABOUT, &CMainWindow::OnHelpAbout)
 END_MESSAGE_MAP()
 
 // CMainWindow message handlers
+
+int CMainWindow::OnCreate(LPCREATESTRUCT lpCreateStruct)
+{
+	if (CFrameWnd::OnCreate(lpCreateStruct) == -1)
+		return -1;
+
+	
+	return 0;
+}
 
 void CMainWindow::OnUpdateToolsDxdiag(CCmdUI *pCmdUI)
 {
@@ -112,6 +130,11 @@ void CMainWindow::OnUpdateWindowscontrolsTesttree(CCmdUI *pCmdUI)
 }
 
 void CMainWindow::OnUpdateWindowscontrolsTestlist(CCmdUI *pCmdUI)
+{
+	pCmdUI->Enable();
+}
+
+void CMainWindow::OnUpdateWindowscontrolsTestlistClr(CCmdUI *pCmdUI)
 {
 	pCmdUI->Enable();
 }
@@ -190,6 +213,14 @@ void CMainWindow::OnWindowscontrolsTestlist()
 	WC_TestTable testT;
 	testT.DoModal();
 }
+
+#pragma managed
+void CMainWindow::OnWindowscontrolsTestlistClr()
+{
+	MFC_Tutorial::WC_TestTableCLR ^testT = gcnew MFC_Tutorial::WC_TestTableCLR();
+	testT->ShowDialog(nullptr);
+}
+#pragma unmanaged
 
 void CMainWindow::OnHelpAbout()
 {

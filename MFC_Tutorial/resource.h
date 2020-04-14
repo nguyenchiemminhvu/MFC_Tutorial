@@ -58,8 +58,6 @@
 #define IDC_SCROLLBAR_1                 1041
 #define IDC_SLIDER_1                    1042
 #define IDC_TREE_EMP                    1043
-#define IDC_COMBO1                      1044
-#define IDC_LIST2                       1046
 #define ID_FILE_EXIT_1                  40007
 #define ID_ACCELERATOR_EXIT             40015
 #define ID_HELP_ABOUT                   40017
@@ -89,13 +87,15 @@
 #define ID_WINDOWSCONTROLS_TESTSCROLLBAR 40046
 #define ID_WINDOWSCONTROLS_TESTTREE     40047
 #define ID_WINDOWSCONTROLS_TESTLIST     40048
+#define ID_WINDOWSCONTROLS_TESTLIST40049 40049
+#define ID_WINDOWSCONTROLS_TESTLIST_CLR 40050
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        125
-#define _APS_NEXT_COMMAND_VALUE         40049
+#define _APS_NEXT_COMMAND_VALUE         40051
 #define _APS_NEXT_CONTROL_VALUE         1047
 #define _APS_NEXT_SYMED_VALUE           101
 #endif

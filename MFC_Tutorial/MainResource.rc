@@ -311,6 +311,7 @@ BEGIN
         MENUITEM "Test Slider",                 ID_WINDOWSCONTROLS_TESTSLIDER
         MENUITEM "Test Tree",                   ID_WINDOWSCONTROLS_TESTTREE
         MENUITEM "Test List (Table)",           ID_WINDOWSCONTROLS_TESTLIST
+        MENUITEM "Test List (Table CLR)",       ID_WINDOWSCONTROLS_TESTLIST_CLR
     END
     POPUP "Help"
     BEGIN

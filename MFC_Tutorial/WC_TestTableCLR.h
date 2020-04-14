@@ -1,5 +1,10 @@
 #pragma once
 
+#ifndef __WC_TEST_TABLE_CLR_H__
+#define __WC_TEST_TABLE_CLR_H__
+
+#pragma managed
+
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -188,3 +193,7 @@ namespace MFC_Tutorial
 		}
 	};
 }
+
+#pragma unmanaged
+
+#endif // __WC_TEST_TABLE_CLR_H__

@@ -19,6 +19,8 @@
 #define IDB_BITMAP_LEFT_TO_RIGHT        121
 #define IDB_BITMAP_RIGHT_TO_LEFT        122
 #define IDD_WC_TESTSLIDER               124
+#define IDD_DIALOG_DRIVES_INFO          125
+#define IDD_DIALOG_FILE_PROCESSING      126
 #define IDC_EDIT_DBNAME                 1001
 #define IDC_EDIT_USERNAME               1003
 #define ID_BTN_LOGIN_OK                 1004
@@ -58,6 +60,12 @@
 #define IDC_SCROLLBAR_1                 1041
 #define IDC_SLIDER_1                    1042
 #define IDC_TREE_EMP                    1043
+#define IDC_COMBO_DRIVES                1047
+#define IDC_STATIC_DRIVES_INFO          1048
+#define IDC_EDIT_CONTENT                1049
+#define IDC_BUTTON_FILE_OPEN            1050
+#define IDC_BUTTON2                     1051
+#define IDC_BUTTON_FILE_SAVE            1051
 #define ID_FILE_EXIT_1                  40007
 #define ID_ACCELERATOR_EXIT             40015
 #define ID_HELP_ABOUT                   40017
@@ -89,14 +97,17 @@
 #define ID_WINDOWSCONTROLS_TESTLIST     40048
 #define ID_WINDOWSCONTROLS_TESTLIST40049 40049
 #define ID_WINDOWSCONTROLS_TESTLIST_CLR 40050
+#define ID_WINDOWSCONTROLS_TESTFILEI    40051
+#define ID_STANDARDI_DRIVEINFO          40052
+#define ID_STANDARDI_FILEPROCESSING     40053
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        125
-#define _APS_NEXT_COMMAND_VALUE         40051
-#define _APS_NEXT_CONTROL_VALUE         1047
+#define _APS_NEXT_RESOURCE_VALUE        127
+#define _APS_NEXT_COMMAND_VALUE         40054
+#define _APS_NEXT_CONTROL_VALUE         1052
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

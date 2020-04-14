@@ -217,6 +217,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\IO_DrivesInfo.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\IO_FileProcessing.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\MainApp.cpp"
 				>
 			</File>
@@ -280,6 +288,14 @@
 			</File>
 			<File
 				RelativePath=".\DXDIAG_System.h"
+				>
+			</File>
+			<File
+				RelativePath=".\IO_DrivesInfo.h"
+				>
+			</File>
+			<File
+				RelativePath=".\IO_FileProcessing.h"
 				>
 			</File>
 			<File

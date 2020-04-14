@@ -15,6 +15,9 @@
 #include "WC_TestTableCLR.h"
 #pragma unmanaged
 
+#include "IO_DrivesInfo.h"
+#include "IO_FileProcessing.h"
+
 #include "resource.h"
 
 IMPLEMENT_DYNAMIC(CMainWindow, CFrameWnd)
@@ -71,6 +74,10 @@ BEGIN_MESSAGE_MAP(CMainWindow, CFrameWnd)
 	ON_COMMAND(ID_WINDOWSCONTROLS_TESTLIST_CLR, &CMainWindow::OnWindowscontrolsTestlistClr)
 
 	ON_COMMAND(ID_HELP_ABOUT, &CMainWindow::OnHelpAbout)
+	ON_UPDATE_COMMAND_UI(ID_STANDARDI_DRIVEINFO, &CMainWindow::OnUpdateStandardiDriveinfo)
+	ON_UPDATE_COMMAND_UI(ID_STANDARDI_FILEPROCESSING, &CMainWindow::OnUpdateStandardiFileprocessing)
+	ON_COMMAND(ID_STANDARDI_DRIVEINFO, &CMainWindow::OnStandardiDriveinfo)
+	ON_COMMAND(ID_STANDARDI_FILEPROCESSING, &CMainWindow::OnStandardiFileprocessing)
 END_MESSAGE_MAP()
 
 // CMainWindow message handlers
@@ -135,6 +142,16 @@ void CMainWindow::OnUpdateWindowscontrolsTestlist(CCmdUI *pCmdUI)
 }
 
 void CMainWindow::OnUpdateWindowscontrolsTestlistClr(CCmdUI *pCmdUI)
+{
+	pCmdUI->Enable();
+}
+
+void CMainWindow::OnUpdateStandardiDriveinfo(CCmdUI *pCmdUI)
+{
+	pCmdUI->Enable();
+}
+
+void CMainWindow::OnUpdateStandardiFileprocessing(CCmdUI *pCmdUI)
 {
 	pCmdUI->Enable();
 }
@@ -221,6 +238,18 @@ void CMainWindow::OnWindowscontrolsTestlistClr()
 	testT->ShowDialog(nullptr);
 }
 #pragma unmanaged
+
+void CMainWindow::OnStandardiDriveinfo()
+{
+	IO_DrivesInfo testDr;
+	testDr.DoModal();
+}
+
+void CMainWindow::OnStandardiFileprocessing()
+{
+	IO_FileProcessing testFP;
+	testFP.DoModal();
+}
 
 void CMainWindow::OnHelpAbout()
 {

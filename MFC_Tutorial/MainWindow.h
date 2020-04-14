@@ -31,6 +31,8 @@ protected:
 	afx_msg void OnUpdateWindowscontrolsTesttree(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateWindowscontrolsTestlist(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateWindowscontrolsTestlistClr(CCmdUI *pCmdUI);
+	afx_msg void OnUpdateStandardiDriveinfo(CCmdUI *pCmdUI);
+	afx_msg void OnUpdateStandardiFileprocessing(CCmdUI *pCmdUI);
 	afx_msg void OnUpdateHelpAbout(CCmdUI *pCmdUI);
 
 	afx_msg void OnToolsDxdiag();
@@ -44,7 +46,8 @@ protected:
 	afx_msg void OnWindowscontrolsTesttree();
 	afx_msg void OnWindowscontrolsTestlist();
 	afx_msg void OnWindowscontrolsTestlistClr();
-
+	afx_msg void OnStandardiDriveinfo();
+	afx_msg void OnStandardiFileprocessing();
 	afx_msg void OnHelpAbout();
 };
 

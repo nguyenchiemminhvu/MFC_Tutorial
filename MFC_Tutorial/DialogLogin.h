@@ -6,6 +6,8 @@
 #include <afxwin.h>
 #include "resource.h"
 
+#include "ConnectionInfo.h"
+
 class CDialogLogin : 
 	public CDialog
 {
@@ -37,6 +39,9 @@ public:
 
 	CButton m_checkLogin;
 	CButton m_buttonLogin;
+
+private:
+	CConnectionInfo conInfo;
 };
 
 #endif // __DIALOG_LOGIN_H__

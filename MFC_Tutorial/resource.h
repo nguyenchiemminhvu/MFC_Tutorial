@@ -64,7 +64,6 @@
 #define IDC_STATIC_DRIVES_INFO          1048
 #define IDC_EDIT_CONTENT                1049
 #define IDC_BUTTON_FILE_OPEN            1050
-#define IDC_BUTTON2                     1051
 #define IDC_BUTTON_FILE_SAVE            1051
 #define ID_FILE_EXIT_1                  40007
 #define ID_ACCELERATOR_EXIT             40015
@@ -105,7 +104,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        127
+#define _APS_NEXT_RESOURCE_VALUE        128
 #define _APS_NEXT_COMMAND_VALUE         40054
 #define _APS_NEXT_CONTROL_VALUE         1052
 #define _APS_NEXT_SYMED_VALUE           101

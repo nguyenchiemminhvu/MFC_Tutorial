@@ -74,40 +74,26 @@ BOOL CDialogLogin::OnInitDialog()
 	HICON iconLogin = AfxGetApp()->LoadIcon(IDI_ICON_LOGIN);
 	SetIcon(iconLogin, FALSE);
 
-	UpdateData(TRUE);
-	m_checkLogin.SetCheck(1);
-	if (m_checkLogin.GetCheck())
-		m_buttonLogin.EnableWindow(TRUE);
-	else
-		m_buttonLogin.EnableWindow(FALSE);
-
 	return TRUE;
 }
 
 void CDialogLogin::OnBnClicked_CheckLogin()
 {
 	UpdateData(TRUE);
-	if (m_checkLogin.GetCheck())
-		m_buttonLogin.EnableWindow(TRUE);
-	else
-		m_buttonLogin.EnableWindow(FALSE);
 }
 
 void CDialogLogin::OnBnClicked_OK()
 {
-	CString DBName, Username, Password;
-	m_editDBName.GetWindowText(DBName);
-	m_editUsername.GetWindowText(Username);
-	m_editPassword.GetWindowText(Password);
+	m_editDBName.GetWindowText(conInfo.DBName);
+	m_editUsername.GetWindowText(conInfo.UserName);
+	m_editPassword.GetWindowText(conInfo.Password);
 
-	if (TestConnection(DBName, Username, Password))
+	if (TestConnection(conInfo.DBName, conInfo.UserName, conInfo.Password))
 	{
-		CString res;
-		res.Append(L"Connected!\n");
-		res.Append(Username);
-		res.Append(L"/");
-		res.Append(DBName);
-		AfxMessageBox(res);
+		// Save connection info to file
+		if (m_checkLogin.GetCheck())
+		{
+		}
 
 		CDialog::OnOK();
 	}

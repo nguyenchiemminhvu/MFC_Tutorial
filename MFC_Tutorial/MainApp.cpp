@@ -26,6 +26,27 @@ BOOL CMainApp::InitInstance()
 	if (!CWinApp::InitInstance())
 		return FALSE;
 
+	// create needed folders
+	DWORD att = GetFileAttributes(L".\\DOWNLOADS");
+	if (!(att != INVALID_FILE_ATTRIBUTES && (att & FILE_ATTRIBUTE_DIRECTORY))) // check dir not exists
+	{
+		if (!CreateDirectory(L".\\DOWNLOADS", NULL))
+		{
+			AfxMessageBox(L"Can not create folders");
+			return FALSE;
+		}
+	}
+
+	att = GetFileAttributes(L".\\CONFIGS");
+	if (!(att != INVALID_FILE_ATTRIBUTES && (att & FILE_ATTRIBUTE_DIRECTORY))) // check dir not exists
+	{
+		if (!CreateDirectory(L".\\CONFIGS", NULL))
+		{
+			AfxMessageBox(L"Can not create folders");
+			return FALSE;
+		}
+	}
+
 	CDialogLogin *dLogin = new CDialogLogin();
 	int loginRes = dLogin->DoModal();
 	if (loginRes != IDOK)
@@ -43,17 +64,6 @@ BOOL CMainApp::InitInstance()
 
 	m_hAccel = LoadAccelerators(AfxGetInstanceHandle(), MAKEINTRESOURCE(IDR_ACCELERATOR_1));
 	delete dLogin;
-
-	// create needed folders
-	DWORD att = GetFileAttributes(L".\\DOWNLOADS");
-	if (!(att != INVALID_FILE_ATTRIBUTES && (att & FILE_ATTRIBUTE_DIRECTORY))) // check dir not exists
-	{
-		if (!CreateDirectory(L".\\DOWNLOADS", NULL))
-		{
-			AfxMessageBox(L"Can not create folders");
-			return FALSE;
-		}
-	}
 
 	return TRUE;
 }

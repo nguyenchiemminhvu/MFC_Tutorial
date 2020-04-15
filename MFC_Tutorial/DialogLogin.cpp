@@ -7,6 +7,8 @@
 
 #include <stdio.h>
 
+const WCHAR * CONNECTION_FILE_PATH = L".\\CONFIGS\\Connection.cfg";
+
 char *DB_NAME = new char[30];
 char *USER_NAME = new char[30];
 char *PASS_WORD = new char[30];
@@ -74,6 +76,22 @@ BOOL CDialogLogin::OnInitDialog()
 	HICON iconLogin = AfxGetApp()->LoadIcon(IDI_ICON_LOGIN);
 	SetIcon(iconLogin, FALSE);
 
+	CFileStatus fileStatus;
+	if (CStdioFile::GetStatus(CONNECTION_FILE_PATH, fileStatus))
+	{
+		CStdioFile file(CONNECTION_FILE_PATH, CFile::modeRead | CFile::typeText);
+		
+		CArchive ar(&file, CArchive::load);
+		conInfo.Serialize(ar);
+		ar.Close();
+		file.Close();
+
+		m_editDBName.SetWindowText(conInfo.DBName);
+		m_editUsername.SetWindowText(conInfo.UserName);
+		m_editPassword.SetWindowText(conInfo.Password);
+		m_checkLogin.SetCheck(TRUE);
+	}
+
 	return TRUE;
 }
 
@@ -90,9 +108,23 @@ void CDialogLogin::OnBnClicked_OK()
 
 	if (TestConnection(conInfo.DBName, conInfo.UserName, conInfo.Password))
 	{
-		// Save connection info to file
+		CFileStatus fileStatus;
+		
 		if (m_checkLogin.GetCheck())
 		{
+			// Save connection info to file
+			CStdioFile file(CONNECTION_FILE_PATH, CFile::modeCreate | CFile::modeWrite | CFile::typeText);
+			
+			CArchive ar(&file, CArchive::store);
+			conInfo.Serialize(ar);
+
+			ar.Close();
+		}
+		else
+		{
+			// Delete saved connection info
+			if (CStdioFile::GetStatus(CONNECTION_FILE_PATH, fileStatus))
+				CStdioFile::Remove(CONNECTION_FILE_PATH);
 		}
 
 		CDialog::OnOK();

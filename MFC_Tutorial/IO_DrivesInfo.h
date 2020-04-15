@@ -21,6 +21,13 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 
 	DECLARE_MESSAGE_MAP()
+
+protected:
+	afx_msg virtual BOOL OnInitDialog();
+	afx_msg void OnCbnSelchangeComboDrives();
+
+private:
+	CComboBox m_comboDrives;
 };
 
 #endif // __IO_DRIVES_INFO_H__

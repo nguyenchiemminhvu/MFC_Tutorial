@@ -20,6 +20,9 @@ public:
 
 public:
 	afx_msg BOOL ProcessMessageFilter(int code, LPMSG msg);
+
+private:
+	void RegisterTheApplication();
 };
 
 extern CMainApp theApp;

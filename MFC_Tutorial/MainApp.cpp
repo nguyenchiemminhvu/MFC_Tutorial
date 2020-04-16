@@ -9,6 +9,8 @@
 #include <string>
 #include <fstream>
 
+#include <winreg.h>
+
 CMainApp theApp;
 
 CMainApp::CMainApp(void)
@@ -47,6 +49,9 @@ BOOL CMainApp::InitInstance()
 		}
 	}
 
+	// register the application
+	RegisterTheApplication();
+
 	CDialogLogin *dLogin = new CDialogLogin();
 	int loginRes = dLogin->DoModal();
 	if (loginRes != IDOK)
@@ -80,4 +85,80 @@ BOOL CMainApp::ProcessMessageFilter(int code, LPMSG msg)
 	}
 
 	return CWinApp::ProcessMessageFilter(code, msg);
+}
+
+void CMainApp::RegisterTheApplication()
+{
+	HKEY key;
+
+	ULONG res = RegOpenKeyEx(
+		HKEY_LOCAL_MACHINE,
+		L"SOFTWARE\\MFC_Tutorial\\",
+		REG_OPTION_NON_VOLATILE,
+		KEY_ALL_ACCESS,
+		&key
+	);
+	
+	if (res != ERROR_SUCCESS)
+	{
+		// Setup registry values for the first time
+		DWORD dispos;
+		RegCreateKeyEx(
+			HKEY_LOCAL_MACHINE,
+			L"SOFTWARE\\MFC_Tutorial\\",
+			0,
+			NULL,
+			REG_OPTION_NON_VOLATILE,
+			KEY_ALL_ACCESS,
+			NULL,
+			&key,
+			&dispos
+		);
+		
+		int CountAccess = 0;
+		RegSetValueEx(
+			key, 
+			L"CountAccess", 
+			0, 
+			REG_DWORD, 
+			(BYTE *)(void*)(&CountAccess), 
+			sizeof(CountAccess)
+		);
+
+		WCHAR version[] = L"1.0.0";
+		RegSetValueEx(
+			key,
+			L"Version",
+			0,
+			REG_SZ,
+			(LPBYTE)(version),
+			(DWORD)((lstrlen(version)+1) * 2)
+		);
+	}
+	else
+	{
+		// increase access time
+		DWORD CountAccess;
+		DWORD Len;
+		RegQueryValueEx(
+			key,
+			L"CountAccess",
+			0,
+			0,
+			(LPBYTE)(&CountAccess),
+			&Len
+		);
+
+		CountAccess++;
+		RegSetValueEx(
+			key,
+			L"CountAccess",
+			0,
+			REG_DWORD,
+			(BYTE*)(void*)(&CountAccess),
+			sizeof(DWORD)
+		);
+	}
+
+	RegCloseKey(key);
 }

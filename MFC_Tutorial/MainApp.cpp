@@ -52,13 +52,13 @@ BOOL CMainApp::InitInstance()
 	// register the application
 	RegisterTheApplication();
 
-	CDialogLogin *dLogin = new CDialogLogin();
-	int loginRes = dLogin->DoModal();
-	if (loginRes != IDOK)
-	{
-		delete dLogin;
-		return FALSE;
-	}
+	//CDialogLogin *dLogin = new CDialogLogin();
+	//int loginRes = dLogin->DoModal();
+	//if (loginRes != IDOK)
+	//{
+	//	delete dLogin;
+	//	return FALSE;
+	//}
 
 	CMainWindow *firstWin = new CMainWindow();
 	m_pMainWnd = firstWin;
@@ -68,7 +68,7 @@ BOOL CMainApp::InitInstance()
 	firstWin->LoadAccelTable(MAKEINTRESOURCE(IDR_ACCELERATOR_1));
 
 	m_hAccel = LoadAccelerators(AfxGetInstanceHandle(), MAKEINTRESOURCE(IDR_ACCELERATOR_1));
-	delete dLogin;
+	//delete dLogin;
 
 	return TRUE;
 }

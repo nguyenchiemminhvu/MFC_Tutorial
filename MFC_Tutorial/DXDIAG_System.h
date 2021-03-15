@@ -22,6 +22,7 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 	afx_msg virtual BOOL OnInitDialog();
+	afx_msg virtual void OnTimer(UINT_PTR nIDEvent);
 
 public:
 	CStatic m_System_CurDateTime;

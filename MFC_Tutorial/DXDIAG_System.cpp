@@ -40,6 +40,7 @@ void DXDIAG_System::DoDataExchange(CDataExchange* pDX)
 
 
 BEGIN_MESSAGE_MAP(DXDIAG_System, CPropertyPage)
+	ON_WM_TIMER()
 END_MESSAGE_MAP()
 
 
@@ -70,5 +71,24 @@ BOOL DXDIAG_System::OnInitDialog()
 	swprintf(lpPageFile, L"%d MB used, %d MB available", memStatus.ullTotalPageFile / bytesToMB, memStatus.ullAvailPageFile / bytesToMB);
 	m_System_PageFile.SetWindowText(lpPageFile);
 
+	SetTimer(1, 1, NULL);
+	
 	return TRUE;
+}
+
+void DXDIAG_System::OnTimer(UINT_PTR nIDEvent)
+{
+	CTime curTime = CTime::GetTickCount();
+	int hh = curTime.GetHour();
+	int mm = curTime.GetMinute();
+	int ss = curTime.GetSecond();
+
+	CString hhStr, mmStr, ssStr;
+	hhStr.Format(L"%02d", hh);
+	mmStr.Format(L"%02d", mm);
+	ssStr.Format(L"%02d", ss);
+
+	m_System_CurDateTime.SetWindowText(hhStr + ":" + mmStr + ":" + ssStr);
+
+	CDialog::OnTimer(nIDEvent);
 }
